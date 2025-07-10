@@ -3,7 +3,7 @@
 import React from "react";
 
 const Resume: React.FC = () => {
-  const googleDriveViewUrl = "https://drive.google.com/file/d/1UgZ3lBVI0AJUtXyoyvqCIaMZou7GvbFu/view?usp=sharing";
+  const googleDriveViewUrl = "https://drive.google.com/file/d/1_j6kf3PdWjd_gqDGYpjLc-P-2gHHkVyu/view?usp=sharing";
   const resumeDownloadUrl = "/Resume.pdf"; // Place your PDF in public/documents/
 
   return (
