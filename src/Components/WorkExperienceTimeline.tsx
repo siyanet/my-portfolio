@@ -14,6 +14,7 @@ interface Experience {
   summary: string;
   achievements: string[];
   skills?:  string[];
+  data_aos: string;
 }
 
 const experiences: Experience[] = [
@@ -24,6 +25,7 @@ const experiences: Experience[] = [
     period: "Jul 2024 – Sep 2024 · 3 mos",
     location: "Addis Ababa, Ethiopia · Hybrid",
     logo: "/logos/kuraztech.svg",
+    data_aos: "fade-left",
     summary:
       "Contributed to a Restaurant Management System using React, Tailwind CSS, and Redux.",
     achievements: [
@@ -39,6 +41,7 @@ const experiences: Experience[] = [
     period: "Jul 2024 – Sep 2024 · 3 mos",
     location: "Addis Ababa, Ethiopia · Hybrid",
     logo: "/logos/ewenet.svg",
+    data_aos: "fade-right",
     summary:
       "Built RESTful APIs with Django REST Framework, optimized PostgreSQL queries.",
     achievements: ["Implemented JWT auth", "Reduced API latency by 35%"],
@@ -51,6 +54,7 @@ const experiences: Experience[] = [
     period: "Nov 2023 – Jan 2024 · 3 mos",
     location: "Addis Ababa, Ethiopia · On-site",
     logo: "/logos/tria.svg",
+    data_aos: "fade-left",
     summary:
       "Participated in the Quality Assurance team for Learning Management System (LMS) project",
     achievements: ["Helped identify bugs and collaborated with developers to resolve issues"],
@@ -85,13 +89,14 @@ const WorkExperienceTimeline: React.FC = () => {
                 <span className="block h-4 w-4 rounded-full border-4 border-gray-950 bg-emerald-500 shadow-md" />
               </span>
 
-              <motion.article
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                viewport={{ once: true }}
+              <article
+              data-aos = {exp.data_aos}
+                // initial={{ opacity: 0, y: 30 }}
+                // whileInView={{ opacity: 1, y: 0 }}
+                // transition={{ duration: 0.4 }}
+                // viewport={{ once: true }}
                 className={`w-full max-w-md rounded-xl bg-gray-900 p-6 shadow-md border border-gray-700
-                  ${alignLeft ? "ml-auto pr-8 text-left" : "mr-auto pl-8 text-right"}
+                  ${alignLeft ? "ml-auto md:mr-28 pr-8 text-left" : "mr-auto md:ml-28 pl-8 text-right"}
                 `}
               >
                 {/* Logo and Info */}
@@ -138,7 +143,7 @@ const WorkExperienceTimeline: React.FC = () => {
                     </span>
                   ))}
                 </div>
-              </motion.article>
+              </article>
             </li>
           );
         })}

@@ -53,6 +53,7 @@ export default function ContactSection() {
 
         {/* Right side - Form */}
         <form
+        data-aos="fade-left"
           onSubmit={handleSubmit}
           className="md:w-1/2 bg-gray-900 p-6 rounded-xl shadow-lg space-y-4"
         >
