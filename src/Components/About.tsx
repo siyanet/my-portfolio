@@ -12,7 +12,7 @@ const AboutSection: React.FC = () => {
         {/* Image */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
-            src="/myphoto.jpg" // Change this to your actual image path
+            src="/myphoto.png" // Change this to your actual image path
             alt="Siyanet Getahun"
             className="w-96 h-96 object-cover shadow-lg"
           />
