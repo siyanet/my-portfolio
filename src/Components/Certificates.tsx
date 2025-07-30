@@ -81,7 +81,7 @@ export default function CertificatesCarousel() {
       </button>
 
       {/* Carousel Items */}
-      <div className="relative flex w-full flex-1 items-center justify-center">
+      <div className="relative flex w-full flex-1 items-center justify-center overflow-x-hidden">
         {certificates.map((cert, i) => {
           const position = pos(i);
           const isCenter = position === 0;
@@ -102,10 +102,9 @@ export default function CertificatesCarousel() {
                   }}
                   exit={{ x: position * -300, scale: 0.75, opacity: 0 }}
                   transition={{ type: "spring", stiffness: 260, damping: 30 }}
-                  className={`absolute h-[26rem] w-[18rem] object-contain flex items-center justify-center ${
+                  className={`absolute h-[26rem] w-[90vw] max-w-[18rem] left-1/2 -translate-x-1/2 object-contain flex items-center justify-center ${
                     isCenter ? "blur-0 z-10" : "blur-sm z-0"
                   }`}
-                  style={{ left: "50%", translateX: "-50%" }}
                 >
                   {isPDF ? (
                     <a href={cert.src} target="_blank" rel="noopener noreferrer">
